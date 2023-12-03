@@ -43,8 +43,8 @@ export class TextComponent implements AfterViewInit {
   });
 
   tries = 3;
-  possibleCapitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  possibleSmallLetters = 'abdfghijklmnopqrstuvwxyz';
+  possibleCapitalLetters = 'ABCDEFGHJKLMNOPQRSTUVWXYZ';
+  possibleSmallLetters = 'abdfghijkmnopqrstuvwxyz';
   ans = '';
   showSpinner = false;
 
