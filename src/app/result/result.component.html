@@ -1,0 +1,10 @@
+<div class="container">
+  @if (success) {
+  <p class="form-field-padding">Congratualtions!</p>
+  } @else {
+  <p class="form-field-padding">I think you are not human...</p>
+  }
+  <button mat-raised-button color="primary" (click)="stageGuard.restart()">
+    Try again?
+  </button>
+</div>

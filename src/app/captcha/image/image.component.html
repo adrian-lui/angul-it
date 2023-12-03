@@ -1,0 +1,25 @@
+<div class="container">
+  <p style="font-size: small">Click and reveal an icon...</p>
+  <p>Maybe you can find a {{ ans }}?</p>
+  <mat-chip-listbox
+    aria-label="captcha image options"
+    class="form-field-padding"
+  >
+    <mat-chip-option
+      *ngFor="let choice of choices; index as i"
+      (click)="reveal(i, choice)"
+    >
+      @if(revealingChoice === i) {
+      <img [ngSrc]="choice.icon" height="20" width="20" />
+      } @else {
+      {{ choice.label }}
+      }
+    </mat-chip-option>
+  </mat-chip-listbox>
+  @if (showSpinner) {
+  <mat-spinner [diameter]="50"></mat-spinner>
+  } @else {
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+  <button mat-stroked-button (click)="onBack()">Back</button>
+  }
+</div>
